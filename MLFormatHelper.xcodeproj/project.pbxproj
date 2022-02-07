@@ -13,6 +13,15 @@
 		B5F28BE925E4DF170061A16E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5F28BE825E4DF170061A16E /* Preview Assets.xcassets */; };
 		B5F28BF325E4E0150061A16E /* FileExplorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F28BF225E4E0150061A16E /* FileExplorer.swift */; };
 		B5F28BF625E4E01D0061A16E /* ToJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F28BF525E4E01D0061A16E /* ToJson.swift */; };
+		DB4C170927A6FDDE0022A903 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4C170327A6FDDE0022A903 /* Info.swift */; };
+		DB4C170A27A6FDDE0022A903 /* Annotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4C170427A6FDDE0022A903 /* Annotations.swift */; };
+		DB4C170B27A6FDDE0022A903 /* COCOFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4C170527A6FDDE0022A903 /* COCOFormat.swift */; };
+		DB4C170C27A6FDDE0022A903 /* Licenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4C170627A6FDDE0022A903 /* Licenses.swift */; };
+		DB4C170D27A6FDDE0022A903 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4C170727A6FDDE0022A903 /* Images.swift */; };
+		DB4C170E27A6FDDE0022A903 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4C170827A6FDDE0022A903 /* Categories.swift */; };
+		DB4C171327A7067F0022A903 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4C171027A7067F0022A903 /* Coordinates.swift */; };
+		DB4C171427A7067F0022A903 /* CMLFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4C171127A7067F0022A903 /* CMLFormat.swift */; };
+		DB4C171527A7067F0022A903 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4C171227A7067F0022A903 /* Annotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +34,15 @@
 		B5F28BEB25E4DF170061A16E /* MLFormatHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MLFormatHelper.entitlements; sourceTree = "<group>"; };
 		B5F28BF225E4E0150061A16E /* FileExplorer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileExplorer.swift; sourceTree = "<group>"; };
 		B5F28BF525E4E01D0061A16E /* ToJson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToJson.swift; sourceTree = "<group>"; };
+		DB4C170327A6FDDE0022A903 /* Info.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
+		DB4C170427A6FDDE0022A903 /* Annotations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Annotations.swift; sourceTree = "<group>"; };
+		DB4C170527A6FDDE0022A903 /* COCOFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = COCOFormat.swift; sourceTree = "<group>"; };
+		DB4C170627A6FDDE0022A903 /* Licenses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Licenses.swift; sourceTree = "<group>"; };
+		DB4C170727A6FDDE0022A903 /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		DB4C170827A6FDDE0022A903 /* Categories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		DB4C171027A7067F0022A903 /* Coordinates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
+		DB4C171127A7067F0022A903 /* CMLFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMLFormat.swift; sourceTree = "<group>"; };
+		DB4C171227A7067F0022A903 /* Annotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +75,8 @@
 		B5F28BE025E4DF160061A16E /* MLFormatHelper */ = {
 			isa = PBXGroup;
 			children = (
+				DB4C170F27A7061F0022A903 /* CreateML */,
+				DB4C170227A6FDD10022A903 /* COCO */,
 				B5F28BE125E4DF160061A16E /* MLFormatHelperApp.swift */,
 				B5F28BF525E4E01D0061A16E /* ToJson.swift */,
 				B5F28BF225E4E0150061A16E /* FileExplorer.swift */,
@@ -75,6 +95,29 @@
 				B5F28BE825E4DF170061A16E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DB4C170227A6FDD10022A903 /* COCO */ = {
+			isa = PBXGroup;
+			children = (
+				DB4C170427A6FDDE0022A903 /* Annotations.swift */,
+				DB4C170827A6FDDE0022A903 /* Categories.swift */,
+				DB4C170727A6FDDE0022A903 /* Images.swift */,
+				DB4C170327A6FDDE0022A903 /* Info.swift */,
+				DB4C170527A6FDDE0022A903 /* COCOFormat.swift */,
+				DB4C170627A6FDDE0022A903 /* Licenses.swift */,
+			);
+			path = COCO;
+			sourceTree = "<group>";
+		};
+		DB4C170F27A7061F0022A903 /* CreateML */ = {
+			isa = PBXGroup;
+			children = (
+				DB4C171227A7067F0022A903 /* Annotation.swift */,
+				DB4C171027A7067F0022A903 /* Coordinates.swift */,
+				DB4C171127A7067F0022A903 /* CMLFormat.swift */,
+			);
+			path = CreateML;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,7 +147,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					B5F28BDD25E4DF160061A16E = {
 						CreatedOnToolsVersion = 12.4;
@@ -149,6 +192,15 @@
 				B5F28BF625E4E01D0061A16E /* ToJson.swift in Sources */,
 				B5F28BE425E4DF160061A16E /* ContentView.swift in Sources */,
 				B5F28BF325E4E0150061A16E /* FileExplorer.swift in Sources */,
+				DB4C171327A7067F0022A903 /* Coordinates.swift in Sources */,
+				DB4C170927A6FDDE0022A903 /* Info.swift in Sources */,
+				DB4C170B27A6FDDE0022A903 /* COCOFormat.swift in Sources */,
+				DB4C171427A7067F0022A903 /* CMLFormat.swift in Sources */,
+				DB4C170E27A6FDDE0022A903 /* Categories.swift in Sources */,
+				DB4C170C27A6FDDE0022A903 /* Licenses.swift in Sources */,
+				DB4C170D27A6FDDE0022A903 /* Images.swift in Sources */,
+				DB4C170A27A6FDDE0022A903 /* Annotations.swift in Sources */,
+				DB4C171527A7067F0022A903 /* Annotation.swift in Sources */,
 				B5F28BE225E4DF160061A16E /* MLFormatHelperApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,10 +329,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MLFormatHelper/MLFormatHelper.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"MLFormatHelper/Preview Content\"";
-				DEVELOPMENT_TEAM = M36TF66AJP;
+				DEVELOPMENT_TEAM = P9HJX3XLEA;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MLFormatHelper/Info.plist;
@@ -289,8 +342,9 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Jelapang.MLFormatHelper;
+				PRODUCT_BUNDLE_IDENTIFIER = MLFormatHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -301,10 +355,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MLFormatHelper/MLFormatHelper.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"MLFormatHelper/Preview Content\"";
-				DEVELOPMENT_TEAM = M36TF66AJP;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MLFormatHelper/Info.plist;
@@ -313,8 +368,9 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Jelapang.MLFormatHelper;
+				PRODUCT_BUNDLE_IDENTIFIER = MLFormatHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

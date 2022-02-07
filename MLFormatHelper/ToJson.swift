@@ -1,7 +1,81 @@
 import Foundation
 
 class ToJson {
-    //convert from vott json to create ML json
+    // convert from coco json to create ML json
+    func cocoJsonToCreateMLJson(_ filepath: String) -> Void {
+        //coco json
+        let fromFileURL = URL(fileURLWithPath: filepath)
+        
+        let data = try? Data(contentsOf: fromFileURL)
+        
+        if let coco = try? JSONDecoder().decode(COCOFormat.self, from: data!),
+           let cocoImages = coco.images {
+            
+            // dictionary of images
+            var cocoImagesDict = Dictionary<Int, String>()
+            // fill dictionary of images
+            for cocoImage in cocoImages {
+                cocoImagesDict[cocoImage.id] = cocoImage.fileName
+            }
+            
+            // dictionary of labels
+            var cocoLabelsDict = Dictionary<Int, String>()
+            if let cocoLabels = coco.categories {
+                // fill dictionary of labels
+                for cocoLabel in cocoLabels {
+                    cocoLabelsDict[cocoLabel.id] = cocoLabel.name
+                }
+            }
+            
+            // create ML object
+            var toJson : [CMLFormat]?
+            
+            // array of annotations
+            if let cocoAnnotations = coco.annotations {
+                for cocoAnnotation in cocoAnnotations {
+                    if let categoryId = cocoAnnotation.categoryId,
+                       let bbox = cocoAnnotation.bbox {
+                        
+                        toJson = toJson ?? Array<CMLFormat>()
+                        
+                        toJson!.append(CMLFormat(annotation:
+                                    [Annotation(coordinates:
+                                                Coordinates(x: (bbox[0] + bbox[2]),
+                                                            y: (bbox[1] + bbox[3]),
+                                                            width: 2*bbox[2],
+                                                            height: 2*bbox[3]),
+                                               label:
+                                                cocoLabelsDict[categoryId])],
+                                  images:
+                                    cocoImagesDict[cocoAnnotation.imageId]))
+                    }
+                }
+            }
+            
+            // write ML object to drive
+            if let theJSONData = try? JSONEncoder().encode(toJson),
+               let theJSONText = String(
+                data: theJSONData,
+                encoding: String.Encoding.utf8) {
+            
+                print("JSON string = \n\(theJSONText)")
+                let toFileURL = fromFileURL
+                print("\(toFileURL) updated!" )
+                
+                //writing
+                do {
+                    try theJSONText.write(to: toFileURL, atomically: true, encoding: String.Encoding.utf8)
+                }
+                catch {
+                    /* error handling here */
+                    print("cannot perform write file")
+                }
+            }
+        }
+    }
+
+    
+    // convert from vott json to create ML json
     func vottJsonToCreateMLJson(_ filepath: String) -> Void {
         //vott json
         let fromFileURL = URL(fileURLWithPath: filepath)
